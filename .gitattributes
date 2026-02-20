@@ -1,0 +1,5 @@
+# Tell GitHub linguist to ignore everything
+* linguist-vendored
+
+# Except the lib folder
+lib/** linguist-vendored=false
