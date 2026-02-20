@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create New Post</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- iOS Mobile Container -->
+<div class="max-w-[430px] mx-auto min-h-screen bg-white dark:bg-background-dark relative flex flex-col">
+<!-- Status Bar -->
+<div class="flex justify-between items-center px-8 py-3 w-full">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-icons-outlined text-sm">signal_cellular_alt</span>
+<span class="material-icons-outlined text-sm">wifi</span>
+<span class="material-icons-outlined text-sm">battery_full</span>
+</div>
+</div>
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 px-4 py-3 flex items-center justify-between">
+<button class="text-slate-500 dark:text-slate-400 font-medium px-2 py-1">
+                Cancel
+            </button>
+<h1 class="text-sm font-semibold tracking-tight uppercase opacity-50">New Post</h1>
+<button class="bg-primary text-white px-5 py-1.5 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity">
+                Publish
+            </button>
+</header>
+<!-- Post Content Form -->
+<main class="flex-grow flex flex-col px-6 py-8">
+<!-- Title Input -->
+<div class="mb-6">
+<input class="w-full text-4xl font-bold border-none focus:ring-0 p-0 placeholder-slate-300 dark:placeholder-slate-700 bg-transparent" placeholder="Title" type="text"/>
+</div>
+<!-- Author Context (Subtle) -->
+<div class="flex items-center space-x-3 mb-8">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-100 dark:bg-slate-800">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Professional portrait of a male user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTV7Dvn6cgWKw0LU9cGqW29h82Q4Peji_eqYaWk18RME4K8RGKjpVrJTJ2Hs92jMvz5hd4f5IGiK5NDgGZLz5arG6KBwGcv11BcbPyhubzYO9JzgGAryaovXzxZ7W32vLb6MitTuTHdK6PALKSzs3EHjTbusKRgIvmbVm_eUIZ8-zUqTq3zGyz_Z2rtaLBdmt-tHE5gHwU-Zz5pqMEItmQytR6EJ5FAj2w-W214yP2oCD7urWAbae6DUCaz7EG46OBc4MSwglY7Mo"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-500">Alex Rivers</span>
+<span class="text-[10px] text-slate-400">Posting to Public Feed</span>
+</div>
+</div>
+<!-- Body Content -->
+<div class="flex-grow">
+<textarea class="w-full h-full text-lg leading-relaxed border-none focus:ring-0 p-0 placeholder-slate-300 dark:placeholder-slate-700 bg-transparent resize-none" placeholder="Start writing..."></textarea>
+</div>
+</main>
+<!-- Formatting Toolbar (Fixed above imaginary keyboard) -->
+<footer class="border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-background-dark p-4 flex items-center justify-between">
+<div class="flex items-center space-x-6 text-slate-400">
+<button class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">format_bold</span>
+</button>
+<button class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">format_italic</span>
+</button>
+<button class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">link</span>
+</button>
+<button class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">image</span>
+</button>
+<button class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">format_list_bulleted</span>
+</button>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-[10px] font-medium text-slate-400 uppercase tracking-widest">Draft Saved</span>
+<div class="w-1.5 h-1.5 rounded-full bg-green-400"></div>
+</div>
+</footer>
+<!-- iOS Home Indicator -->
+<div class="flex justify-center pb-2 pt-1 bg-white dark:bg-background-dark">
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- iOS Status Bar Spacer (Simulated) -->
+<div class="h-12 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 flex items-center px-4">
+<div class="flex items-center justify-between w-full">
+<button class="flex items-center text-primary font-medium">
+<span class="material-icons-round text-3xl -ml-2">chevron_left</span>
+<span class="text-lg">Feed</span>
+</button>
+<span class="text-sm font-semibold opacity-60">@janesmith</span>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</div>
+<main class="max-w-2xl mx-auto px-6 pb-32">
+<!-- Author Attribution -->
+<header class="py-8 flex items-center space-x-4">
+<div class="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
+<img alt="Author Profile" class="h-full w-full object-cover" data-alt="Close up portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk5k2d3y2HLFNm_kPZTWYp06XR2_fGHaMx5aLYxHhjEeaqAq0WAiHSNL-bNIsI2jFl6X9SpalbonM1kBZgFYti0Kn4AQ4AG83ofXmFUANRDa8YQY1-d1SV7tVCFnPOiu1LDdJMP2Q7RIPtwYdyvcfIx6aQSxv5b9cFpX24zcJcyAd5SyGmtdd7ZlrDDhravF8vUV4i_34tcwzCjxp5eMpodQBl0-tQjd3Xy2Oj7zC0nItrIDUcIRp1YvVeKgz2te2JY2dqkLUcLk4"/>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-lg">Jane Smith</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Oct 24, 2023 · 6 min read</span>
+</div>
+</header>
+<!-- Article Content -->
+<article class="prose prose-slate dark:prose-invert">
+<h1 class="text-4xl font-extrabold tracking-tight leading-tight mb-6">
+                The Future of Minimalist Interface Design
+            </h1>
+<div class="space-y-6 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+<p>
+                    Minimalism in digital interfaces has evolved far beyond the simple "less is more" mantra. Today, it’s about intentionality and cognitive efficiency. As our digital lives become increasingly cluttered with notifications and complex workflows, the role of the designer is to strip away the noise and surface only what matters.
+                </p>
+<div class="my-8 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800">
+<img alt="Coding Interface" class="w-full h-auto object-cover aspect-video" data-alt="Minimalist clean code editor on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY8OdVXdTPGOadD6eMVICVqqtz3YKwC30Rihe6gwT4iUM2nxe-3nm0xm9lQ_Hrc6jkpoHwxVL9afysnGFwfshDRNp92FlTdtTNzHkQ7vxIC0-hfVTkLDYZqW3smLSRBXFsF0vg5-Bes6lYikWWaHzxWTpza2wpu-0tIxaWI--wxXUAMvaq-VuH0I8tut17RdkhfYH5V20eSB91atOxo0Cll-mzsbMjC0b-WeUo1Zg8QQwshbwvpzTxP0Z8WOyzhNCXMrY1eQfR6as"/>
+</div>
+<p>
+                    When we look at modern mobile operating systems, we see a shift towards spatial awareness and depth. Transparency effects, subtle shadows, and fluid typography aren't just aesthetic choices; they are visual cues that help users navigate three-dimensional information hierarchies on two-dimensional screens.
+                </p>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mt-10 mb-4">The Impact of Whitespace</h2>
+<p>
+                    Whitespace is the most powerful tool in a minimalist designer's kit. It's not "empty" space; it's active breathing room that guides the eye and organizes content without the need for heavy borders or dividers. In this post, you'll notice how the generous margins allow the text to be the primary focus.
+                </p>
+<blockquote class="border-l-4 border-primary pl-6 py-2 italic text-xl text-slate-900 dark:text-white font-light">
+                    "Simplicity is the ultimate sophistication. It takes a lot of hard work to make something simple, to truly understand the underlying challenges and come up with elegant solutions."
+                </blockquote>
+<p>
+                    As we move forward into 2024 and beyond, the trend toward "Invisible UI" will continue to grow. Interfaces that disappear when you don't need them and reappear just in time. This is the ultimate goal of user experience design.
+                </p>
+</div>
+</article>
+<!-- Tags -->
+<div class="mt-12 flex flex-wrap gap-2">
+<span class="px-4 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">#Design</span>
+<span class="px-4 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">#Minimalism</span>
+<span class="px-4 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">#UIUX</span>
+</div>
+<!-- Administrative Actions -->
+<div class="mt-20 pt-8 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center space-y-4">
+<p class="text-sm text-slate-500 dark:text-slate-400 text-center">
+                    You are the author of this post.
+                </p>
+<button class="w-full py-4 px-6 bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 font-semibold rounded-lg flex items-center justify-center space-x-2 active:scale-[0.98] transition-all">
+<span class="material-icons-round text-xl">delete_outline</span>
+<span>Delete Post</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar (Fixed Mobile Style) -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 flex justify-between items-center max-w-2xl mx-auto">
+<div class="flex items-center space-x-6">
+<button class="flex items-center space-x-1 text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">favorite_border</span>
+<span class="text-sm font-medium">1.2k</span>
+</button>
+<button class="flex items-center space-x-1 text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">chat_bubble_outline</span>
+<span class="text-sm font-medium">48</span>
+</button>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">bookmark_border</span>
+</button>
+<button class="p-2 text-primary">
+<span class="material-icons-round">ios_share</span>
+</button>
+</div>
+</div>
+</body></html>

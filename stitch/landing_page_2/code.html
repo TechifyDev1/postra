@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Landing Page - Minimalist Social</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffffff",
+              "background-dark": "#000000",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Inter', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .ios-shadow {
+            box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.05), 0 8px 10px -6px rgba(255, 255, 255, 0.05);
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black font-display text-white min-h-screen flex flex-col justify-between transition-colors duration-300">
+<div class="h-12 w-full"></div>
+<main class="flex-grow flex flex-col items-center justify-center px-8 text-center">
+<div class="mb-12 flex flex-col items-center">
+<div class="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mb-8 ios-shadow">
+<span class="material-icons text-black text-5xl">auto_stories</span>
+</div>
+<h1 class="text-4xl font-bold tracking-tight mb-3 text-white">
+                Verbum
+            </h1>
+<p class="text-neutral-400 text-lg font-light max-w-xs leading-relaxed">
+                The minimalist space for elegant thoughts and storytelling.
+            </p>
+</div>
+<div class="w-full max-w-sm aspect-square relative mb-12 opacity-60">
+<img alt="Minimalist abstract background" class="w-full h-full object-cover rounded-2xl filter grayscale contrast-150 brightness-75" data-alt="Abstract minimalist black and white geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyaM8Q7PkmN9jFSFQpuSIvbHj-2M8fJj7lwIE0v6uU5FaNn76YCDbjFlx-NeT8cnPKeBl3QFQ9uY-DdP0no27W6DnX3u8bwmw6zHethPVkeSbpyI11OBq0lY0T4R0kyXrfoGixvn7TMmuqbigpx19NKt4_4yvWG64fD2iR2WW-TG6fdW84L-3WVNgU6Fv_zOiqukkVIhCTR4OtK6FcxU30R78ro3C99fP31LEofe4bmEwuLMwG_5Qzju45ztAz8z9oH26Th9MHf5o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+</div>
+</main>
+<footer class="w-full px-8 pb-12 safe-area-bottom">
+<div class="flex flex-col space-y-4 max-w-sm mx-auto">
+<button class="w-full bg-white text-black font-semibold py-5 rounded-full text-lg active:scale-[0.98] transition-all duration-150">
+                Get Started
+            </button>
+<button class="w-full bg-transparent border-[1px] border-white text-white font-semibold py-5 rounded-full text-lg active:bg-white/10 transition-colors duration-150">
+                Log In
+            </button>
+<div class="pt-6 text-center">
+<p class="text-[11px] uppercase tracking-[0.2em] text-neutral-500 font-medium">
+                    By continuing, you agree to our 
+                    <a class="underline decoration-neutral-700 underline-offset-4 hover:text-white transition-colors" href="#">Terms</a> 
+                    &amp; 
+                    <a class="underline decoration-neutral-700 underline-offset-4 hover:text-white transition-colors" href="#">Privacy</a>
+</p>
+</div>
+</div>
+<div class="mt-8 flex justify-center">
+<div class="w-32 h-1 bg-neutral-800 rounded-full"></div>
+</div>
+</footer>
+<div class="fixed top-6 right-6">
+<button class="p-3 bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400 active:scale-95 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons text-xl block">light_mode</span>
+</button>
+</div>
+
+</body></html>

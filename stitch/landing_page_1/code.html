@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Landing Page - Minimalist Social</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Inter', sans-serif;
+        }
+        .ios-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col justify-between transition-colors duration-300">
+<!-- Header / Status Bar Spacing -->
+<div class="h-12 w-full"></div>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center px-8 text-center">
+<!-- App Logo Container -->
+<div class="mb-12 flex flex-col items-center">
+<div class="w-24 h-24 bg-slate-900 dark:bg-white rounded-xl flex items-center justify-center mb-8 ios-shadow">
+<span class="material-icons text-white dark:text-slate-900 text-5xl">auto_stories</span>
+</div>
+<h1 class="text-4xl font-bold tracking-tight mb-3 text-slate-900 dark:text-white">
+                Verbum
+            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg font-light max-w-xs">
+                The minimalist space for elegant thoughts and storytelling.
+            </p>
+</div>
+<!-- Featured Abstract Visual (Optional minimalist hint) -->
+<div class="w-full max-w-sm aspect-square relative mb-12 opacity-80">
+<img alt="Minimalist abstract background" class="w-full h-full object-cover rounded-xl filter grayscale contrast-125" data-alt="Abstract minimalist black and white geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyaM8Q7PkmN9jFSFQpuSIvbHj-2M8fJj7lwIE0v6uU5FaNn76YCDbjFlx-NeT8cnPKeBl3QFQ9uY-DdP0no27W6DnX3u8bwmw6zHethPVkeSbpyI11OBq0lY0T4R0kyXrfoGixvn7TMmuqbigpx19NKt4_4yvWG64fD2iR2WW-TG6fdW84L-3WVNgU6Fv_zOiqukkVIhCTR4OtK6FcxU30R78ro3C99fP31LEofe4bmEwuLMwG_5Qzju45ztAz8z9oH26Th9MHf5o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent"></div>
+</div>
+</main>
+<!-- Bottom Actions Container -->
+<footer class="w-full px-8 pb-12 safe-area-bottom">
+<div class="flex flex-col space-y-4 max-w-sm mx-auto">
+<!-- Primary Action -->
+<button class="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold py-4 rounded-full text-lg shadow-xl active:scale-95 transition-transform duration-150">
+                Get Started
+            </button>
+<!-- Secondary Action -->
+<button class="w-full bg-transparent border-2 border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-semibold py-4 rounded-full text-lg active:bg-slate-50 dark:active:bg-slate-900 transition-colors duration-150">
+                Log In
+            </button>
+<!-- Subtle Utility Links -->
+<div class="pt-4 text-center">
+<p class="text-[11px] uppercase tracking-widest text-slate-400 dark:text-slate-500 font-medium">
+                    By continuing, you agree to our 
+                    <a class="underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 hover:text-primary transition-colors" href="#">Terms</a> 
+                    &amp; 
+                    <a class="underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 hover:text-primary transition-colors" href="#">Privacy</a>
+</p>
+</div>
+</div>
+<!-- Home Indicator Mockup -->
+<div class="mt-8 flex justify-center">
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full opacity-40"></div>
+</div>
+</footer>
+<!-- Theme Toggle (Floating Top Right for demo) -->
+<div class="fixed top-6 right-6">
+<button class="p-3 bg-white dark:bg-slate-800 rounded-full ios-shadow text-slate-500 dark:text-slate-400" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons text-xl block dark:hidden">dark_mode</span>
+<span class="material-icons text-xl hidden dark:block">light_mode</span>
+</button>
+</div>
+</body></html>

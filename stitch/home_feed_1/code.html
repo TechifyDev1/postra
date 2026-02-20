@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Mobile Screen Wrapper (iPhone Pro Dimensions approximation) -->
+<div class="max-w-[430px] mx-auto min-h-screen bg-white dark:bg-slate-950 shadow-2xl relative overflow-hidden flex flex-col">
+<!-- Status Bar Area (iOS Style) -->
+<div class="h-12 flex items-center justify-between px-8 pt-4 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md sticky top-0 z-40">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex items-center space-x-2">
+<span class="material-icons-outlined text-sm">signal_cellular_alt</span>
+<span class="material-icons-outlined text-sm">wifi</span>
+<span class="material-icons-outlined text-sm rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Header / Large Title -->
+<header class="px-6 py-4 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md sticky top-12 z-30 flex justify-between items-end">
+<div>
+<h1 class="text-3xl font-bold tracking-tight">Home</h1>
+</div>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">
+<span class="material-icons-outlined text-[20px]">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 dark:border-slate-800">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional male headshot for profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_RCflPFSbvfPZ4CxRCy1f8NxBIaRznJU2eAy2GNhMODQH0RpuzKkA-lRkn9wPnxafZOYJZo2ZhiLiFduisRjWCY1QZWiRjS8ndtijnqe_mkzhPjQE8HHG3-iG64ZbyL6VouuI4dFnXDprIGSHotlub3bT5iTSqcrQ7UL9XyEMpxB2A72DYNcx-nSJX6kSjE1cvSS380KeE6FiU3DOVgcVvYjSAPRhkU17Ktg7kNIpqk3NsKBNfH0VHkiDZ8JocXGIu536am0ZAPY"/>
+</div>
+</div>
+</header>
+<!-- Main Feed Scroll Area -->
+<main class="flex-1 overflow-y-auto hide-scrollbar px-6 pt-2 pb-32 space-y-6">
+<!-- Category Chips -->
+<div class="flex space-x-3 overflow-x-auto hide-scrollbar py-2">
+<button class="px-5 py-2 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full text-sm font-medium">All</button>
+<button class="px-5 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium">Design</button>
+<button class="px-5 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium">Tech</button>
+<button class="px-5 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium">Culture</button>
+</div>
+<!-- Post Card 1 -->
+<article class="p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl transition-all active:scale-[0.98]">
+<div class="flex items-center space-x-3 mb-4">
+<img alt="Author" class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of a female digital creator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyc9cL0pmbpSg_Hypp7Jx7ok4gv_TwdTONbB2Akz8G0lLP8P6XHXs65n6n2TZqL5xHIw9pAUTb61UA3NCpCDliDXBXJ7xSUPZiGLk1OaotaNDzPjdZ2h8Kho_0f2O3E1WBP8fjSj9siYJ-PSNIbxIhA5UGrY-DWna2Io3dJ-e7SwnGhIpdQNVwEEtLxMrWyCIiSX-Py2qDXDvhGL1ACMx737fQqlMoVV4cWPFVQ0a8TFVAa07iHBKCrGDawa5euEPP3w6pddpJKU0"/>
+<span class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider">Sarah Drumm • 2h</span>
+</div>
+<h2 class="text-xl font-bold mb-2 leading-tight">The Subtle Art of Minimalist UI Design in 2024</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5 line-clamp-3">
+                    Minimalism is not just about stripping away elements; it is about finding the core essence of the user's intent...
+                </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">favorite_border</span>
+<span class="text-xs font-medium">124</span>
+</button>
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">chat_bubble_outline</span>
+<span class="text-xs font-medium">32</span>
+</button>
+</div>
+<button class="text-slate-400">
+<span class="material-icons-outlined text-[18px]">ios_share</span>
+</button>
+</div>
+</article>
+<!-- Post Card 2 -->
+<article class="p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl transition-all active:scale-[0.98]">
+<div class="flex items-center space-x-3 mb-4">
+<img alt="Author" class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of a male designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDpuq8Rm5XP86zo7WUT1UgYCNaOM5a6B01Ctp_0_jW325uY15EklBue-tTo6ImAChARJXsW0sGotdwLkjeRxuFeZsbr7UYe7qA8clMAXX2-TLP4y6Mkj9sP9MZzsPGjkjNu93iNAmIzMdwF5ixFPHhA1ZPL8FGp-xMYDGUw7_bD2SmA61RN5dkLjTgIidk8VJ_GpG-jA1OEpHsofjlAVT8jEFsXGHGxhe2Z5f2g1znqNOHDM1RiZW8FTuzwGkjyppAvkw6h3wTQCI"/>
+<span class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider">Alex Rivers • 5h</span>
+</div>
+<h2 class="text-xl font-bold mb-2 leading-tight">Why iOS Gestures Feel More Natural Than Buttons</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5 line-clamp-3">
+                    The physics of liquid interactions and how spatial awareness impacts our daily mobile usage...
+                </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">favorite_border</span>
+<span class="text-xs font-medium">89</span>
+</button>
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">chat_bubble_outline</span>
+<span class="text-xs font-medium">14</span>
+</button>
+</div>
+<button class="text-slate-400">
+<span class="material-icons-outlined text-[18px]">ios_share</span>
+</button>
+</div>
+</article>
+<!-- Post Card 3 (With Image Placeholder) -->
+<article class="p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl transition-all active:scale-[0.98]">
+<div class="flex items-center space-x-3 mb-4">
+<img alt="Author" class="w-6 h-6 rounded-full object-cover" data-alt="Close up of a female blogger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8kJcRuoHElZYivK2c2Aiz8Ti3Tq_CkWfKWDvvOucwsk-VuqZ0QyYoqmd0_KiMeqTr7cP7UQiT2c_Ai6hvH3r3QaSVbeZk56TKA_fBQ2BKf1vNQmUxol8SAXyb8Gpn0iDha1JfpTODa-3yZJ0APehYMfqvTfbIRC-KG7xowao_WaV-c8bDGHWSTw2OY48-T9dInZjDhLwWWTiA9yXds4ObWIJ_wWPhy04wOQzdjpiLPQecrFzBh_Cf3M8P1fHWG_n_WsFYIGmX-3c"/>
+<span class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider">Mina Sato • 8h</span>
+</div>
+<div class="w-full h-48 bg-slate-100 dark:bg-slate-800 rounded-xl mb-4 overflow-hidden">
+<img alt="Workspace" class="w-full h-full object-cover opacity-80" data-alt="Clean minimalist aesthetic workspace with laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGjybG4RHBEoSBIXtAcjPNHt3yUCdEt_Wq1YVI64kQztTnTMrXcE1Y0ljidfEAz_T3V1LtzxZjptoHO62njwo4d9x4yoOssRVWyfXw1mEKrDS7HxQhAPUyp3o9aoKiwHl7eScKjm_GcjjSkt5qlisFvaEcrJ6LzY3jZ4EaIr1VkX_MXVExkrimUSPfIWe09xQ4jtWFgcQu1geojHlrPyNGUCxmWDbS4362znKHCFZlWD24EtJiACvGId3nPb5qvDmGgH73Lysr5SA"/>
+</div>
+<h2 class="text-xl font-bold mb-2 leading-tight">Finding Focus in a Digital World</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5 line-clamp-2">
+                    How removing 90% of your apps can increase your productivity by 100%...
+                </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-1.5 text-primary">
+<span class="material-icons-outlined text-[18px]">favorite</span>
+<span class="text-xs font-medium">2.1k</span>
+</button>
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">chat_bubble_outline</span>
+<span class="text-xs font-medium">88</span>
+</button>
+</div>
+<button class="text-slate-400">
+<span class="material-icons-outlined text-[18px]">ios_share</span>
+</button>
+</div>
+</article>
+<!-- Post Card 4 -->
+<article class="p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl transition-all active:scale-[0.98]">
+<div class="flex items-center space-x-3 mb-4">
+<img alt="Author" class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of a young creator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE7w_qTTi6aZd3CbZ9lsOQU831VX53J87TrRLopnAJKOujNBrLRpYxdC4DBvmsynx2xD7zBQQXd0ZPQCK0QdGiopBVV6jVlYOJ2Lw0CZ1hFBT0cBulixJGFE-eF_qEn_uWvTIm7ikdDhrAoH2edknLtp3gw35HXXMYRK6TcoNbw9-D4HTuxhXbRTkMl4sEWhbHEQ1DZ21UezY9T8bRnDkdHwYQowP4Oe4jisahYOgKKD1ac9OlISO5Zq-Tzfdr6Zzp7Rl7__-bS1g"/>
+<span class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider">Jordan Lee • 1d</span>
+</div>
+<h2 class="text-xl font-bold mb-2 leading-tight">Dark Mode vs Light Mode: The Real Statistics</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5 line-clamp-3">
+                    Recent studies suggest that while dark mode is preferred for aesthetics, light mode remains king for long-form reading...
+                </p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">favorite_border</span>
+<span class="text-xs font-medium">456</span>
+</button>
+<button class="flex items-center space-x-1.5 text-slate-400">
+<span class="material-icons-outlined text-[18px]">chat_bubble_outline</span>
+<span class="text-xs font-medium">54</span>
+</button>
+</div>
+<button class="text-slate-400">
+<span class="material-icons-outlined text-[18px]">ios_share</span>
+</button>
+</div>
+</article>
+</main>
+<!-- Floating Action Button -->
+<button class="absolute bottom-28 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center z-20 active:scale-90 transition-transform">
+<span class="material-icons-outlined text-[28px]">add</span>
+</button>
+<!-- Bottom Navigation Bar (iOS Tab Bar Style) -->
+<nav class="absolute bottom-0 w-full h-24 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 flex justify-around items-start pt-3 px-6 z-40">
+<button class="flex flex-col items-center space-y-1 text-primary">
+<span class="material-icons-outlined text-[26px]">home</span>
+<span class="text-[10px] font-semibold">Home</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-400 hover:text-slate-600 transition-colors">
+<span class="material-icons-outlined text-[26px]">search</span>
+<span class="text-[10px] font-semibold">Search</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-400 hover:text-slate-600 transition-colors">
+<span class="material-icons-outlined text-[26px]">explore</span>
+<span class="text-[10px] font-semibold">Discover</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-400 hover:text-slate-600 transition-colors">
+<span class="material-icons-outlined text-[26px]">person</span>
+<span class="text-[10px] font-semibold">Profile</span>
+</button>
+<!-- iOS Home Indicator Overlay -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full opacity-50"></div>
+</nav>
+</div>
+</body></html>
