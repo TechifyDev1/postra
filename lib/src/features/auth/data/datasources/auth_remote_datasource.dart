@@ -38,6 +38,10 @@ class AuthRemoteDatasource {
     }
   }
 
+  Future<void> logout() async {
+    await client.service.delete(key: 'token');
+  }
+
   Future<String> register(RegisterRequest request) async {
     final response = await client.post(
       Uri.parse(ApiEndpoints.register),

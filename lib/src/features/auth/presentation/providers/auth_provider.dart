@@ -56,6 +56,7 @@ class AuthProvider extends ChangeNotifier {
 
   Future<void> login(LoginRequest request) async {
     _loginError = null;
+    _currentUserError = null;
     try {
       _isLoggingIn = true;
       notifyListeners();
@@ -70,6 +71,7 @@ class AuthProvider extends ChangeNotifier {
 
   Future<void> register(RegisterRequest request) async {
     _registerError = null;
+    _currentUserError = null;
     try {
       _isRegistering = true;
       notifyListeners();
@@ -98,6 +100,14 @@ class AuthProvider extends ChangeNotifier {
 
   Future<void> getCurrentUser() async {
     _currentUserError = null;
+    final token = await SecureStorageService().read(key: 'token');
+    if (token == null || token.isEmpty) {
+      _currentUser = null;
+      _isLoading = false;
+      notifyListeners();
+      return;
+    }
+
     try {
       _isLoading = true;
       notifyListeners();

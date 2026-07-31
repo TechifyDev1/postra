@@ -16,7 +16,7 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<void> logout() {
-    throw UnimplementedError();
+    return remoteDatasource.logout();
   }
 
   @override
