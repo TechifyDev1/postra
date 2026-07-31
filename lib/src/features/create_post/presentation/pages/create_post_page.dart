@@ -26,7 +26,6 @@ class _CreatePostPageState extends ConsumerState<CreatePostPage> {
 
   String _selectedCategory = 'Article';
   File? _selectedImage;
-  bool _isEditorReady = false;
 
   // Local state for formatting
   bool _isBold = false;
@@ -341,7 +340,6 @@ class _CreatePostPageState extends ConsumerState<CreatePostPage> {
                             }
                           },
                           onEditorCreated: () {
-                            _isEditorReady = true;
                             if (widget.postToEdit != null) {
                               _editorController.setText(
                                 widget.postToEdit!.content,

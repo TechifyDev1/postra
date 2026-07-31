@@ -226,10 +226,10 @@ class UserProfileNotifier extends StateNotifier<UserProfileState> {
       final response = await client.put(
         Uri.parse(ApiEndpoints.updateProfile),
         body: jsonEncode({
-          if (fullName != null) 'fullName': fullName,
-          if (bio != null) 'bio': bio,
-          if (profilePic != null) 'profilePic': profilePic,
-          if (bgImage != null) 'bgImage': bgImage,
+          'fullName': ?fullName,
+          'bio': ?bio,
+          'profilePic': ?profilePic,
+          'bgImage': ?bgImage,
         }),
       );
 

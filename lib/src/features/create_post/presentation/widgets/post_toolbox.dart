@@ -141,7 +141,7 @@ class PostToolbox extends StatelessWidget {
         child: IconButton(
           icon: Icon(
             icon,
-            color: isActive ? baseColor : baseColor.withOpacity(0.7),
+            color: isActive ? baseColor : baseColor.withValues(alpha: 0.7),
             size: 22,
           ),
           onPressed: onTap,
