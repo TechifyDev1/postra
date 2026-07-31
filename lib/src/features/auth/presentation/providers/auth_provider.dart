@@ -8,6 +8,7 @@ import 'package:postra/src/features/auth/domain/usercases/login_usecase.dart';
 import 'package:postra/src/features/auth/domain/usercases/logout_usecase.dart';
 import 'package:postra/src/features/auth/domain/usercases/register_usecase.dart';
 import 'package:postra/src/core/network/auth_event_provider.dart';
+import 'package:postra/src/core/storage/secure_storage_service.dart';
 
 class AuthProvider extends ChangeNotifier {
   final LoginUsecase loginUsecase;
